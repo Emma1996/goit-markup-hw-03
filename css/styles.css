@@ -29,6 +29,7 @@ body {
 .main-header-container {
   background-color: #ffffff;
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   border-bottom: 1px solid;
   border-color: #ececec;
@@ -47,6 +48,7 @@ body {
 }
 .main-header-container .navigation-links ul {
   display: flex;
+  flex-wrap: wrap;
   padding-inline-start: 0;
 }
 .main-header-container .navigation-links ul li + li {
@@ -101,6 +103,7 @@ a:active {
   text-align: center;
   height: 600px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -150,19 +153,21 @@ a:active {
 .our-team {
   padding-inline-start: 0;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
   margin-left: 215px;
   margin-right: 215px;
 }
-.about-us-description li,
-.our-team li:not(:first-child) {
+.about-us-description li {
   width: 270px;
+}
+.about-us-description li:not(:first-child),
+.our-team li:not(:first-child) {
   margin-left: 30px;
 }
 
 .about-us-what-we-do li:not(:first-child) {
-  width: 370px;
   margin-left: 30px;
 }
 .our-team-section {
@@ -211,6 +216,7 @@ a:active {
   color: #ffffff;
   padding-left: 215px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   width: 1600px;
 }
@@ -254,6 +260,7 @@ a:active {
 
 .filtering ul {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   margin-bottom: 50px;
@@ -279,24 +286,29 @@ a:active {
   border-radius: 4px;
   color: #ffffff;
 }
-.project-list ul {
+.project-list {
   margin-top: 50px;
+  padding-left: 215px;
+  padding-right: 215px;
+}
+.project-list ul {
   padding-inline-start: 0;
   padding-inline-end: 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  margin-left: 215px;
-  margin-right: 215px;
-  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 1;
+  align-content: center;
   margin-bottom: 0;
-  gap: 30px;
+  gap: 20px;
+  padding: 0;
 }
 
 .project-card {
   background: #ffffff;
   border: 1px solid #eeeeee;
+  flex-basis: calc((100% - 60px) / 3);
 }
+
 .project-container {
   padding-left: 24px;
   margin-top: 0px;
